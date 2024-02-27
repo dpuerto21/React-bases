@@ -23,12 +23,7 @@ const getHeroeByIdAsync = (id) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const heroe = getHeroeById(id);
-      if (getHeroeById) {
-        resolve(heroe);
-      } else {
-        reject("no se encontro el Heroe");
-      }
-      // console.log(heroe);
+      getHeroeById ? resolve(heroe) : reject("no se encontro el heroe");
     }, 1000);
   });
 };
